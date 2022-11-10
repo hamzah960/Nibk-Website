@@ -1,0 +1,183 @@
+@import "./variable.scss";
+
+.history {
+    padding: 80px 0;
+    background-image: url(../images/about-bg-2.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1 {
+        color: $orange-color;
+        text-align: center;
+        margin-bottom: 50px;
+        font-weight: bold;
+        font-size: 60px;
+    }
+    .history-carousel {
+        .carousel-button {
+            display: block;
+            margin-left: auto;
+            margin-bottom: 60px;
+            color: $orange-color;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            background-color: transparent;
+            border: 1px solid;
+            font-size: 30px;
+            transition: 0.6s;
+            &:hover {
+                background-color: $orange-color;
+                color: #fff;
+                border-color: $orange-color;
+            }
+        }
+        .text-carousel {
+            position: relative;
+            width: 80%;
+            height: 290px;
+            overflow: hidden;
+            margin: 0 auto;
+            .carousel-container {
+                .carousel-track {
+                    list-style: none;
+                    padding: 0;
+                    text-align: right;
+                    transition: transform 0.6s ease-in-out;
+                    .item {
+                        color: #fff;
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 100%;
+                        h2 {
+                            color: $orange-color;
+                            font-weight: bold;
+                            font-size: 55px;
+                        }
+                        h5 {
+                            font-weight: bold;
+                        }
+                        p {
+                            opacity: 0.7;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .brake {
+        position: relative;
+        height: 500px;
+        .rotor {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            transition: 0.5s;
+            transform-origin: 50% 55%;
+            img {
+                width: 100%;
+            }
+        }
+        .support {
+            height: 100%;
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+        .carousel-dots {
+            display: flex;
+            justify-content: space-around;
+            .carousel-indecator {
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                border-color: transparent;
+                background-color: $purble-color;
+                transition: all 0.6s;
+                position: absolute;
+                &:first-of-type {
+                    top: 180px;
+                    left: 25px;
+                }
+                &:nth-of-type(2) {
+                    top: 260px;
+                    left: 15px;
+                }
+                &:nth-child(3) {
+                    top: 340px;
+                    left: 33px;
+                }
+                &:nth-child(4) {
+                    top: 410px;
+                    left: 77px
+                }
+                &:nth-child(5) {
+                    top: 458px;
+                    left: 140px;
+                }
+                &:nth-child(6) {
+                    top: 485px;
+                    left: 220px;                
+                }
+                &:nth-child(7) {
+                    top: 480px;
+                    left: 305px;
+                }
+                &.active,
+                &:hover {
+                    background-color: $orange-color;
+                }
+            }
+        }
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .history {
+        .brake {
+            .rotor {
+                transform-origin: 50% 65%;
+                .carousel-dots {
+                    .carousel-indecator {
+                        &:first-of-type {
+                            top: 170px;
+                            left: 54px;
+                        }
+                        &:nth-of-type(2) {
+                            top: 260px;
+                            left: 23px;
+                        }
+                        &:nth-child(3) {
+                            top: 350px;
+                            left: 25px;
+                        }
+                        &:nth-child(4) {
+                            top: 440px;
+                            left: 57px
+                        }
+                        &:nth-child(5) {
+                            top: 510px;
+                            left: 115px;
+                        }
+                        &:nth-child(6) {
+                            top: 565px;
+                            left: 200px;                
+                        }
+                        &:nth-child(7) {
+                            top: 585px;
+                            left: 305px;
+                        }
+                        &.active,
+                        &:hover {
+                            background-color: $orange-color;
+                        }
+                    }  
+                }
+            }
+        }
+    }      
+}

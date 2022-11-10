@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nibk</title>
+    <link rel="stylesheet" href="../styles/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/css/all.min.css">
+    <link rel="stylesheet" href="../styles/css/style.css">
+</head>
+<body>
+
+    <div class="catalogue">
+        <div class="main-grid">
+            <header class="header">
+                <div class="row ps-4 pe-4 align-items-center">
+                    <div class="col-4">
+                        <div class="header-left">
+                            <div class="d-flex justify-content-center">
+                                <ul class="nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link d-none d-lg-block" href="../about-us.html">ABOUT US</a>
+                                    </li>
+                                    <li class="nav-item d-none d-lg-block">
+                                        <a class="nav-link" href="#">CATALOGUE</a>
+                                    </li>
+                                    <li class="nav-menue d-block d-lg-none">
+                                        <a class="nav-link" id="nav-menu" href="">
+                                            <div class="bars d-inline-block">
+                                                <i class="fa-solid fa-bars"></i>
+                                            </div>
+                                            <span>MENU</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 d-flex justify-content-center">
+                        <div class="header-center">
+                            <div class="logo-home m-auto">
+                                <a href="../index.html">
+                                    <img src="../images/logo-home.png" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 px-0">
+                        <div class="header-right">
+                            <div class="d-flex justify-content-between">
+                                <ul class="nav">
+                                    <li class="nav-item d-none d-lg-block">
+                                        <a class="nav-link" href="../products.html">PRODUCTS</a>
+                                    </li>
+                                    <li class="nav-item d-none d-lg-block">
+                                        <a class="nav-link" href="#">CONTACT US</a>
+                                    </li>
+                                </ul>
+                                <a href="" id="reach-btn" class="reach btn rounded-pill">REACH US</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+    
+        <div id="modal-callback" class="modal-callback text-center">
+            <button class="close-btn btn">X</button>
+            <div class="content">
+                <h1>REACH US</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, voluptatum exercitationem. Sint dolores dolor</p>
+                <form action="">
+                    <div class="row">
+                        <div class="col-lg-4 mb-lg-5 mb-4">
+                            <select name="set-country" id="select-country" class="select-country">
+                                <option value="jordan">Select Country</option>
+                                <option value="jordan">Jordan</option>
+                                <option value="egypt">Egypt</option>
+                                <option value="libya">Libya</option>
+                                <option value="oman">Oman</option>
+                                <option value="qatar">Qatar</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-4 mb-lg-5 mb-4">
+                            <div class="input-field">
+                                <label for="text" class="name-field">Name</label>
+                                <input type="text" id="text" class="name" name="name">    
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-lg-5 mb-4">
+                            <div class="input-field">
+                                <label for="email" class="email-field">Email</label>
+                                <input type="email" name="email" id="email" class="email">
+                            </div>
+                        </div>
+                        <div class="col-12 mb-lg-5 mb-3">
+                            <textarea name="enq" id="enq" cols="30" rows="2" placeholder="Enquiry"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <input type="submit" class="btn btn-form rounded-pill" value="Continue">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    
+        <div id="modal-menu" class="modal-menu">
+            <button id="close-menu" class="close-btn btn">X</button>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                        <h3>COMPANY</h3>
+                        <ul>
+                            <li>ABOUT US</li>
+                            <li>MATERIALS</li>
+                            <li>CERTIFICATES</li>
+                            <li>NEWS & EXPOS</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h3>PRODUCTS</h3>
+                        <ul>
+                            <li>BRAKE PADS</li>
+                            <li>SHOES AND LININGS</li>
+                            <li>DISK ROTOR</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h3>CATALOGUE</h3>
+                        <ul>
+                            <li>CARS</li>
+                            <li>BIKES</li>
+                            <li>NEW PRODUCTS</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h3>DID YOU NOW</h3>
+                        <h3>CONTACT US</h3>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="main-catalogue">
+            <div class="container">
+                <div class="menu">
+                    <ul>
+                        <li class="active">
+                            <a href="#">CARS</a>
+                        </li>
+                        <li>
+                            <a href="#">BIKES</a>
+                        </li>
+                        <li>
+                            <a href="#">NEW PRODUCTS</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tabs text-center">
+                    <div class="nav-tabs">
+                        <ul>
+                            <li>
+                                <a href="product-search" class="active">Product</a>
+                            </li>
+                            <li>
+                                <a href="application-search">Application</a>
+                            </li>
+                            <li>
+                                <a href="vin-search">Vin</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pan" id="product-search">
+                        <form>
+                            <div class="row">
+                                <div class="input-field col-sm-10">
+                                    <input type="text" id="txtpartno" class="txtinput" name="txtpartno">
+                                    <label for="txtpartno" class="label">Enter OEM, Nibk, WVA or Any Part No</label>
+                                </div>
+                                <div class="col-sm-2 text-center mt-5 mt-sm-0">
+                                    <input type="submit" class="btn rounded-pill" value="search">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pan app" id="application-search">
+                        <form>
+                            <fieldset>
+                                <div class="app-content row">
+                                    <div class="select-tab col-md-4 col-lg p-0" id="brand-tab">
+                                        <select name="sel-brand" id="sel-brand">
+                                            <option value="">Maker</option>
+                                            <option value="1">HYUNDAI</option>
+                                            <option value="2">KIA</option>
+                                            <option value="3">MITSUBISHI</option>
+                                            <option value="4">FORD</option>
+                                            <option value="5">TOYOTA</option>
+                                            <option value="6">NISSAN</option>
+                                        </select>
+                                    </div>
+                                    <div class="select-tab col-md-4 col-lg p-0 di" id="class-tab">
+                                        <select name="sel-class" id="sel-class">
+                                            <option value="">Class/Series</option>
+                                        </select>
+                                    </div>
+                                    <div class="select-tab col-md-4 col-lg p-0" id="year-tab">
+                                        <select name="sel-year" id="sel-year">
+                                            <option value="">Year</option>
+                                            <option value="1">2011</option>
+                                            <option value="2">2010</option>
+                                            <option value="3">2009</option>
+                                            <option value="4">2008</option>
+                                            <option value="5">2007</option>
+                                            <option value="6">2006</option>
+                                        </select>
+                                    </div>
+                                    <div class="select-tab col-md-4 col-lg p-0" id="body-tab">
+                                        <select name="sel-body" id="sel-body">
+                                            <option value="">Body/Chassis</option>
+                                            <option value="1">4DR</option>
+                                            <option value="2">5DR</option>
+                                            <option value="3">CG</option>
+                                        </select>
+                                    </div>
+                                    <div class="select-tab col-md-4 col-lg p-0" id="engine-vol-tab">
+                                        <select name="sel-engine-vol" id="sel-engine-vol">
+                                            <option value="">Engine Vol</option>
+                                            <option value="1">1300</option>
+                                            <option value="2">1500</option>
+                                            <option value="3">2000</option>
+                                            <option value="4">2700</option>
+                                        </select>
+                                    </div>
+                                    <div class="select-tab col-md-4 col-lg p-0" id="engine-no-tab">
+                                        <select name="sel-engine-no" id="sel-engine-no">
+                                            <option value="">Engine No</option>
+                                            <option value="1">G4EA</option>
+                                            <option value="2">G4EC</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <div class="text-center">
+                                <input type="submit" class="btn rounded-pill" value="search">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pan" id="vin-search">
+                        <form>
+                            <div class="row">
+                                <div class="input-field col-sm-10">
+                                    <input type="text" id="txtpartno" class="txtinput" name="txtpartno">
+                                    <label for="txtpartno" class="label">Enter Vin No</label>
+                                </div>
+                                <div class="col-sm-2 text-center mt-5 mt-sm-0">
+                                    <input type="submit" class="btn rounded-pill" value="search">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            Copyright &copy; 2003-2022
+        </footer>
+    </div>
+
+
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/all.min.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/ctallogue.js"></script>
+</body>
+</html>

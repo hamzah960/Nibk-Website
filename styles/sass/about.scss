@@ -1,0 +1,141 @@
+@import "./variable.scss";
+@import "./mixin.scss";
+@import "./historycarousel.scss";
+
+.about-us-top {
+    background-color: $orange-color;
+    overflow: hidden;
+    .main-grid {
+        min-height: fit-content;
+        overflow: visible;
+        margin-bottom: 40px;
+        .header {
+            .header-left {
+                .nav {
+                    .nav-item a{
+                        color: #fff;
+                        &::after {
+                            background-color: $purble-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .nav {
+        li {
+            display: inline-block;
+            margin-left: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.5s;
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+    .content {
+        img {
+            width: 100%;
+            padding: 5px;
+        }
+        h1 {
+            color: #fff;
+            margin-bottom: 10px;
+            font-weight: bolder;
+            font-size: 50px;
+        }
+        h4 {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        p {
+            line-height: 3;
+            word-spacing: 4px;
+            font-weight: bold;
+        }
+    }
+}
+
+.history {
+    background-image: url(../../images/about-bg-2.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+    h1 {
+        color: $orange-color;
+        margin-bottom: 20px;
+        font-size: 60px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .history-carousel {
+        .history-carousel-box {
+            button {
+                display: block;
+                margin: 60px auto 60px 80%;
+                background: transparent;
+                border: 1px solid $orange-color;
+                font-weight: bold;
+                color: $orange-color;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                font-size: 35px;
+                transition: 0.5s;
+                &:hover {
+                    color: #fff;
+                    background-color: $orange-color;
+                }
+            }
+            .history-carousel-inner {
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+                height: 200px;
+                transition:  0.6s;
+                .content-carousel {
+                    transition: 0.6s ease-in-out;
+                    .history-item {
+                        h1 {
+                            text-align: right;
+                        }
+                        h3 {
+                            color: #fff;
+                            font-weight: bold;
+                            text-align: right;
+                        }
+                        p {
+                            color: #fff;
+                            opacity: 0.6;
+                            font-weight: bold;
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+        }
+        .break {
+            .images {
+                position: relative;
+                img {
+                    position: absolute;
+                }
+                .rotor {
+                    width: 100%;
+                    top: 10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    z-index: 10;
+                }
+                .pad {
+                    top: 50%;
+                    right: 0;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

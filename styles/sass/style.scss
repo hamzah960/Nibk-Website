@@ -1,0 +1,389 @@
+@import "./variable.scss";
+@import "./mixin.scss";
+@import "./classes.scss";
+@import "./about.scss";
+@import "./catalogue.scss";
+
+body {
+    font-family: sans-serif;
+}
+.homepage {
+    position: relative;
+    background-image: url("../../images/homepage.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main-grid {
+    min-height: 100vh;
+    height: auto;
+    overflow: hidden;
+    .header {
+        position: relative;
+        z-index: 500;
+        height: 100px;
+        .header-left {
+            .nav {
+                .nav-item a{
+                    @include nav-item;
+                }
+                .nav-menue {
+                    span {
+                        @include nav-item;
+                        &::after {
+                            bottom: -3px;
+                            width: 95%;
+                        }
+                    }
+                    .bars {
+                        border: 1px solid white;
+                        border-radius: 50%;
+                        padding: 0 10px;
+                        transition: 0.5s;
+                        color: #fff;
+                        margin-right: 4px;
+                    }
+                    &:hover{
+                        .bars {
+                            background-color: $orange-color;
+                            border-color: $orange-color;
+                        }
+                        span {
+                            color: $purble-color;
+                            &::after {
+                                width: 0;
+                            }
+                        }
+                    } 
+                }   
+            }
+        }
+        .header-center {
+            .logo-home {
+                width: 200px;
+                text-align: center;
+                padding-top: 10px;
+            }
+        }
+        .header-right {
+            .nav {
+                .nav-item a {
+                    @include nav-item;
+                    color: #fff;
+                    &::after {
+                        background-color: $purble-color;
+                    }
+                }
+            }
+            .reach {
+                background-color: $purble-color;
+                color: #fff;
+                transition: 0.5s;
+                &:hover {
+                    background-color: #000;
+                }
+            }
+        }
+    }
+}
+.main-carusel {
+    .carousel-inner {
+        position: absolute;
+        top: -100px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 650px;
+        height: 100vh;
+        overflow: hidden;
+        border-radius: 50%;
+        .carousel-item img{
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            top: 0;
+            left: 0;
+        }
+        .dots img{
+            position: relative;
+        }
+        .main-word {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-color: #fff;
+            color: orange;
+            z-index: 500029;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            height: 50%;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: xx-large;
+            text-align: center;
+        }
+        
+    }
+}
+.small-carousel {
+
+    .carousel-caption {
+        position: static;
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        top: 90%;
+        width: 75%;
+    }
+    p {
+        font-weight: bold;
+    }
+    .carousel-inner {
+        height: 300px;
+    }
+    .left-carousel {
+        max-width: 200px;
+        position: absolute;
+        top: 133px;
+        left: 40px;
+        h5 {
+            font-size: 27px;
+            font-weight: bold;
+            color: $orange-color;
+            text-align: center;
+            width: 175px;
+        }
+        svg {
+            font-size: x-large;
+            margin-top: 26px;
+            border: 1px solid $purble-color;
+            border-radius: 50%;
+            padding: 8px;
+            color: $purble-color;
+            &:hover {
+                background-color: $purble-color;
+                color: #fff;
+            }
+        }
+    }
+    .right-carousel {
+        max-width: 200px;
+        position: absolute;
+        top: 133px;
+        right: 40px;
+        h5 {
+            font-size: 27px;
+            font-weight: bold;
+            color: $purble-color;
+            text-align: center;
+            width: 175px;
+        }
+        svg {
+            font-size: x-large;
+            margin-top: 26px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            padding: 8px;
+            color: #fff;
+            &:hover {
+                background-color: $purble-color;
+            }
+        }
+    }
+}
+.footer {
+    background-color: $orange-color;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+}
+.modal-callback {
+    position: fixed;
+    top: -150%;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgb(242 103 34 / 98%);
+    z-index: 1000;
+    transition: 0.5s;
+    
+    .close-btn {
+        color: #fff;
+        font-weight: bold;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        font-size: 30px;
+        transition: 0.5s;
+        &:hover {
+            transform: rotate(180deg);
+        }
+    }
+    .content {
+        margin-top: 100px;
+        color: #fff;
+        h1 {
+            font-weight: bold;
+            font-size: 65px;
+        }
+        p {
+            width: 50%;
+            margin: 10px auto 50px;
+        }
+        form {
+            .select-country {
+                @include formbox;
+                option {
+                    color: #000;
+                    
+                }
+            }
+            .input-field {
+                position: relative;
+                transition: all 0.5s ease;
+                .name-field,
+                .email-field {
+                    position: absolute;
+                    top: 10px;
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+                .name {
+                    @include formbox;
+                }
+                .email {
+                    @include formbox;
+                }
+            }
+            textarea {
+                width: 90%;
+            }
+            .btn-form {
+                color: #fff;
+                font-weight: bold;
+                font-size: 20px;
+                &:hover {
+                    background-color: $purble-color;
+                }
+            }
+        }
+    }
+}
+
+.modal-menu {
+    position: fixed;
+    top: -700px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../images/modal-menu.webp");
+    background-position: center;
+    background-size: cover;
+    z-index: 1000;
+    color: #fff;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+    .close-btn {
+        margin: 10px auto;
+        display: block;
+        font-weight: bold;
+        color: #fff;
+        font-size: 40px;
+        font-family: cursive;
+        transition: all 0.5s ease;
+        &:hover {
+            transform: rotate(180deg);
+        }
+    }
+    h3 {
+        text-decoration: underline;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        &:hover {
+            color: $purble-color;
+        }
+    }
+    ul li {
+        font-weight: bolder;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        &:hover {
+            color: $purble-color;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .homepage {
+        .small-carousel {
+            .left-carousel,
+            .right-carousel {
+                max-width: 155px;
+            }
+        }
+    }
+    .modal-callback {
+        .content {
+            margin-top: 0;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .homepage {
+        .header {
+            .header-center {
+                .logo-home {
+                    
+                    img{
+                        max-width: 60%;
+                    }
+                }
+
+            }
+        }
+        .main-carusel {
+            .carousel-inner {
+                width: 450px;
+                height: 84vh;
+            }
+        }
+        .small-carousel {
+            .right-carousel,
+            .left-carousel {
+                top: 500px;
+            }
+            .carousel-control-prev,
+            .carousel-control-next {
+                width: 60%;
+            }
+        }
+    }
+    .height {
+        height: 100vh;
+    }
+}
+
+@media (max-width: 576px) {
+    .homepage {
+        .main-carusel {
+            .carousel-inner {
+                width: 300px;
+                height: 55vh;
+            }
+        }
+        .small-carousel {
+            h5 {
+                width: 100px;
+            }
+            .right-carousel,
+            .left-carousel {
+                top: 350px;
+                max-width: 120px;
+            }
+        }
+    }
+}
